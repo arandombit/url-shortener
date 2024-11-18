@@ -1,0 +1,14 @@
+In order to run the application in your browser, simply run the following:
+
+- docker build -t url-shortener .
+- docker run -d -p 3000:80 url-shortener
+
+In order to run the unit tests, simply run the following:
+
+- npm test
+
+In order to run smoke tests against the Docker container, ensure you have the
+container running and cURL installed and simply run the following:
+
+- chmod +x ./smoke-tests.sh
+- ./smoke-tests.sh
