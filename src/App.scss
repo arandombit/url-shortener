@@ -1,0 +1,99 @@
+$white: #FFFFFF;
+$dark: #0B0B0F;
+$green: #5CCC5C;
+$red: #CC5C5C;
+
+body, html, #root {
+  background-color: $dark;
+  height: 100%;
+  width: 100%;
+}
+
+input, button {
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+button {
+  background-color: $white;
+  border: 1px solid $white;
+  border-radius: 2px;
+  color: $dark;
+  cursor: pointer;
+  &:hover {
+    background-color: $dark;
+    border-color: $white;
+    color: $white;
+  }
+}
+
+input {
+  background-color: $dark;
+  border: 1px solid $white;
+  border-radius: 2px;
+  color: $white;
+  padding-left: 1em;
+  &::placeholder { color: $white; }
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.error {
+  align-items: center;
+  border: 1px solid $red;
+  border-radius: 2px;
+  color: $red;
+  display: flex;
+  justify-content: center;
+}
+
+.shortened-link {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.shortened-url {
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+button.success {
+  background-color: $green;
+  border: 1px solid $green;
+  color: $dark;
+}
+
+@media only screen and (max-width: 600px) {}
+@media only screen and (min-width: 600px) {
+  button {
+    height: 3em;
+    width: 7em;
+  }
+  input {
+    height: 3em;
+    margin-right: 1em;
+    width: 20em;
+  }
+  .error {
+    height: 3em;
+    margin-top: 1em;
+    width: 25.25em;
+  }
+  .shortened-link {
+    height: 3em;
+    margin-top: 1em;
+    width: 25.5em;
+  }
+  .shortened-url { padding-left: 0.5em; }
+}
